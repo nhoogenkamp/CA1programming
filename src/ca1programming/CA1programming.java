@@ -23,8 +23,8 @@ public class CA1programming {
             BufferedReader br = new BufferedReader( new FileReader("students.txt"));    
             BufferedWriter bw = new BufferedWriter(new FileWriter("status.txt"));
             String name = br.readLine();
-            String workLoad = br.readLine();
-            String studentNum = br.readLine();
+            String workLoad = br.readLine();    
+            String studentNum = br.readLine();                      
             bw.write(studentNum+"-");
             if (name != null) {
                 String[] nameParts = name.split("\\s+");
@@ -33,12 +33,27 @@ public class CA1programming {
                 } else {
                     System.out.println("Use a first and last name only");
                 }
-            
-                 bw.close();
-
-            }
+                bw.newLine();
+            if (workLoad.matches("1")) {
+                        bw.write("Very Light");
+                        } else {
+                if (workLoad.matches("2")) {
+                        bw.write("Light");
+                        } else {
+            if (workLoad.matches("[3-5]")) {
+                        bw.write("Part Time");
+                        } else {
+                }if (workLoad.matches("[6-8]")) {
+                        bw.write("Full Time");
+                } else{     
+                }if (workLoad.matches("[9+]")) {
+                    System.out.println("Please pick a number between 1-8 for the classes");
+ 
+                 bw.close();         
+            }}}}
     } catch (Exception e) {
             System.out.println(e);
+            
     }
     }
 }
