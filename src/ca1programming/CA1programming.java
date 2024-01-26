@@ -20,7 +20,14 @@ public class CA1programming {
      */
     public static void main(String[] args) {
  try{
-            BufferedReader br = new BufferedReader( new FileReader("students.txt"));        
+            BufferedReader br = new BufferedReader( new FileReader("students.txt"));       
+            String data = br.readLine();
+            String workLoad = br.readLine();
+            String studentNum = br.readLine();
+
+                 BufferedWriter bw = new BufferedWriter(new FileWriter("status.txt"));
+                 bw.write(data+","+workLoad+","+studentNum);
+                 bw.close();
 
     
     } catch (Exception e) {
