@@ -25,16 +25,15 @@ public class CA1programming {
             String name = br.readLine();
             String workLoad = br.readLine();
             String studentNum = br.readLine();
+            bw.write(studentNum+"-");
             if (name != null) {
-
                 String[] nameParts = name.split("\\s+");
-
-
                 if (nameParts.length > 1) {
                     bw.write(nameParts[nameParts.length - 1]);
                 } else {
                     System.out.println("Use a first and last name only");
                 }
+            
                  bw.close();
 
             }
