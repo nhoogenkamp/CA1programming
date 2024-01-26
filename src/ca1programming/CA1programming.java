@@ -20,16 +20,24 @@ public class CA1programming {
      */
     public static void main(String[] args) {
  try{
-            BufferedReader br = new BufferedReader( new FileReader("students.txt"));       
-            String data = br.readLine();
+            BufferedReader br = new BufferedReader( new FileReader("students.txt"));    
+            BufferedWriter bw = new BufferedWriter(new FileWriter("status.txt"));
+            String name = br.readLine();
             String workLoad = br.readLine();
             String studentNum = br.readLine();
+            if (name != null) {
 
-                 BufferedWriter bw = new BufferedWriter(new FileWriter("status.txt"));
-                 bw.write(data+","+workLoad+","+studentNum);
+                String[] nameParts = name.split("\\s+");
+
+
+                if (nameParts.length > 1) {
+                    bw.write(nameParts[nameParts.length - 1]);
+                } else {
+                    System.out.println("Use a first and last name only");
+                }
                  bw.close();
 
-    
+            }
     } catch (Exception e) {
             System.out.println(e);
     }
