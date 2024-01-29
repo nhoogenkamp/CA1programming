@@ -27,7 +27,15 @@ public class CA1programming {
             String studentNum = br.readLine();
 
             while (name != null && workLoad != null && studentNum != null) {
-                bw.write(studentNum + "-");
+                
+
+                if (studentNum.length() <6 ){
+                    System.out.println("A student number has at least 6 digits ");
+                }else if (!studentNum.matches("\\d{2}[a-zA-Z]{1,2}\\S*\\d+")){
+                    System.out.println("Invalid Studentnumber");    
+                } else {
+                    bw.write(studentNum + "-");
+                }
                 
                 String[] nameParts = name.split("\\s+");
                  if (!nameParts[0].matches("[a-zA-Z]+")){
