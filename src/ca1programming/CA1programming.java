@@ -28,9 +28,11 @@ public class CA1programming {
 
             while (name != null && workLoad != null && studentNum != null) {
                 bw.write(studentNum + "-");
-
+                
                 String[] nameParts = name.split("\\s+");
-                if (nameParts.length > 1) {
+                 if (!nameParts[0].matches("[a-zA-Z]+")){
+                System.out.println("Your first name can only be letters");
+                }else if (nameParts.length > 1) {
                     bw.write(nameParts[nameParts.length - 1]);
                 } else {
                     System.out.println("Use a first and last name only");
