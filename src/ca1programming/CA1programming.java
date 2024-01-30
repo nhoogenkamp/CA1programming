@@ -26,6 +26,8 @@ public class CA1programming {
             String workLoad = br.readLine();
             String studentNum = br.readLine();
             String firstTwoDigits = studentNum.substring(0, 1);
+            String lastChars = studentNum.substring(5);
+            int lastNumbers = Integer.parseInt(lastChars);
             while (name != null && workLoad != null && studentNum != null) {
                 
 
@@ -35,8 +37,10 @@ public class CA1programming {
                     System.out.println("Invalid year. Please ensure the year is at least 20 or later.");
                 }else if (!studentNum.matches("\\d{1,2}[a-zA-Z]{1,2}\\S*\\d+")){
                     System.out.println("Invalid Studentnumber");    
-                } else {
+                } else if (lastNumbers>=0 && lastNumbers<=200){
                     bw.write(studentNum + "-");
+                }else{
+                    System.out.println("The last digits of the student number cannot be greater than 200");
                 }
                 
                 String[] nameParts = name.split("\\s+");
