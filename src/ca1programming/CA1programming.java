@@ -26,10 +26,9 @@ public class CA1programming {
             String workLoad = br.readLine();
             String studentNum = br.readLine();
             String firstTwoDigits = studentNum.substring(0, 1);
-            String lastChars = studentNum.substring(5);
-            int lastNumbers = Integer.parseInt(lastChars);
             while (name != null && workLoad != null && studentNum != null) {
-                
+            String lastChars = studentNum.substring(5);
+            int lastNumbers = Integer.parseInt(lastChars);     
 
                 if (studentNum.length() <6 ){
                     System.out.println("A student number has at least 6 digits ");
@@ -67,7 +66,7 @@ public class CA1programming {
 
                 bw.newLine();
 
-                // Read the next set of data for the next student
+
                 name = br.readLine();
                 workLoad = br.readLine();
                 studentNum = br.readLine();
