@@ -15,8 +15,8 @@ import java.io.FileWriter;
  */
 public class CA1programming {
 
-    /**
-     * @param args the command line arguments
+    /*
+      Github link: https://github.com/nhoogenkamp/CA1programming
      */
     public static void main(String[] args) {
          try {
